@@ -8,7 +8,6 @@ RUNDS=$3
 ARCH=$4
 MULTICL=$5
 
-# DIR=/app/clip_textadapt_final/results/results${ATTEMPT}/seed_${SEED}/
 DIR=results/results${ATTEMPT}/seed_${SEED}/
 if [ -e "${DIR}results_${ds}.pkl" ]; then
     echo "Oops! The results exist at '${DIR}results_${ds}.pkl' (so skip this job)"
@@ -21,4 +20,3 @@ else
     --backbone_arch ${ARCH} \
     --multiclass_forget ${MULTICL} 
 fi
-    # --output_dir /app/clip_textadapt_final/results/results${ATTEMPT}/seed_${SEED}/ \
